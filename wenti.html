@@ -64,7 +64,6 @@
     </li>
     <li>
       <h3>隔壁老王<span>奏是刚写的</span></h3>
-      <p>我是内容我是内容我是内容我是内容我是内容我是内容我是内容</p>
     </li>
   </ul>
   <script>
@@ -92,10 +91,11 @@
         
         max_H = Math.max.apply(null,h);
         maxKey = getarraykey(h, max_H);
-        ceshi = h[maxKey];
+        ceshi = h[maxKey] + "px";
       }
       $("h3").eq(i).text("编号："+i+"，高度："+li_H);//把区块的序号和它的高度值写入对应的区块H3标题里面
     }
+    $("#wfl").css("height",ceshi);
   }
   /* 使用for in运算返回数组中某一值的对应项数(比如算出最小的高度值是数组里面的第几个) */
   function getarraykey(s, v) {for(k in s) {if(s[k] == v) {return k;}}}
