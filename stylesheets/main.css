@@ -1,9 +1,9 @@
 body {
   background-color: #fff;
-  padding:50px;
   font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#727272;
   font-weight:400;
+  margin: 0;
 }
 
 @media print {
@@ -14,7 +14,7 @@ body {
   }
 }
 @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { 
-  header {
+  header h1 {
     background-image: -webkit-linear-gradient(left, #147B96, #E6D205 25%, #147B96 50%, #E6D205 75%, #147B96);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -25,4 +25,68 @@ body {
 @-webkit-keyframes masked-animation {
   0%  { background-position: 0 0;}
   100% { background-position: -100% 0;}
+}
+
+header{text-align:center;}
+header h1{margin:0;}
+header img{border-radius:50%; width:100px;}
+header p{margin:0;}
+header.top{height: 60px; position: absolute; background: #00a0e9; width: 100%;}
+header.top h1{display: none;}
+header.top .h-l{text-align: left;}
+header.top .h-l img{width: 40px; margin: 10px 0;}
+header.top .h-r{text-align: right;}
+header.top .h-r p{display: inline;}
+header.top .h-r p span, header.top .h-r p a, header.top .h-r p i{display: none;}
+header.top .h-r img{width: 40px; margin: 10px 0;}
+
+.info{
+  display: -moz-box; 
+  display: -webkit-box; 
+  display: box; 
+}
+.h-l{
+  -moz-box-flex: 5; 
+  -webkit-box-flex: 5; 
+  box-flex: 5;
+  padding-right: 10px;
+  text-align: right;
+}
+.h-r{
+  -moz-box-flex: 3;
+  -webkit-box-flex: 3; 
+  box-flex: 3;
+  text-align: left;
+}
+/*.h-l, .h-r{width: 50%;}*/
+.bosh{display: none; color: rgba(220,220,220,.5);}
+.info p i{font-size: 9px; color: rgba(220,220,220,.5)}
+/*估计是大设备*/
+@media screen and (min-width: 1200px) {
+  .p-xl{display: block;}
+}
+/*估计是电脑设备*/
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+  .p-l{display: block;}
+}
+/*估计是平板设备*/
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .p-m{display: block;}
+  .info{display:block;}
+  .h-l, .h-r{text-align: center;}
+  .h-l i, .h-r i{display: none;}
+}
+/*估计手机设备*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .p-s{display: block;}
+  .info{display:block;}
+  .h-l, .h-r{text-align: center;}
+  .h-l i, .h-r i{display: none;}
+}
+/*最小设备*/
+@media only screen and (max-width: 479px) {
+  .p-xs{display: block;}
+  .info{display:block;}
+  .h-l, .h-r{text-align: center;}
+  .h-l i, .h-r i{display: none;}
 }
