@@ -51,7 +51,7 @@ p.weibo em{background-repeat:no-repeat; background-position:66.6666% 0%;}
 p.weibo em:hover{background-repeat:no-repeat; background-position:66.6666% 100%;}
 p.github em{background-repeat:no-repeat; background-position:100% 0%;}
 p.github em:hover{background-repeat:no-repeat; background-position:100% 100%;}
-header.top .h-r p span, header.top .h-r p a, header.top .h-r p i{display: none;}
+header.top .h-r p span, header.top .h-r p i{display: none;}
 header.top > p{display: none;}
 
 .info{
