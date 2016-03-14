@@ -31,7 +31,6 @@ window.onload = function(){
     hRa[hRa.length] = hRp[i].getElementsByTagName("a")[0];
     hRspan[hRspan.length] = hRp[i].getElementsByTagName("span")[0];
   };
-  console.log(hRa);
   var hRaWidth=0, hRspanWidth=0;
   for (var i = 0; i<hRa.length; i++) {
     if(hRa[i].offsetWidth > hRaWidth){
