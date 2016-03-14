@@ -15,7 +15,7 @@ body {
 }
 @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { 
   header h1 {
-    background-image: -webkit-linear-gradient(left, #147B96, #E6D205 25%, #147B96 50%, #E6D205 75%, #147B96);
+    background-image: -webkit-linear-gradient(left, #ff6e02, #ffff00 25%, #ff6e02 50%, #ffff00 75%, #ff6e02);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-background-size: 200% 100%;
@@ -27,18 +27,29 @@ body {
   100% { background-position: -100% 0;}
 }
 
-header{text-align:center; transition:all .6s;}
+header, header img, header p, header p em{transition:all .6s;}
+header{text-align:center;}
 header h1{margin:0;}
 header img{border-radius:50%; width:100px;}
 header p{margin:0;}
-header.top{height: 60px; background: #00a0e9; width: 100%; position: fixed; top: 0;}
-header.top h1{display: none;}
+header .h-r img{display: none;}
+header.top{height: 60px; background: #3598db; width: 100%; position: fixed; top: 0;}
+header.top h1{width: 100%; position: fixed; line-height: 60px;}
 header.top .h-l{text-align: left;}
-header.top .h-l img{width: 40px; margin: 10px 0;}
+header.top .h-l img{width: 40px; margin: 10px;}
 header.top .h-r{text-align: right;}
-header.top .h-r p{display: inline;}
+header.top .h-r p{float: right;}
+header.top .h-r p:nth-child(1){display: none;}
+header.top .h-r em{display: block; height: 40px; width: 40px; margin: 10px; float: left; background-image: url(../images/info.png);}
+p.blog em{background-repeat:no-repeat; background-position:0% 0%;}
+p.blog em:hover{background-repeat:no-repeat; background-position:0% 100%;}
+p.msn em{background-repeat:no-repeat; background-position:33.3333% 0%;}
+p.msn em:hover{background-repeat:no-repeat; background-position:33.3333% 100%;}
+p.weibo em{background-repeat:no-repeat; background-position:66.6666% 0%;}
+p.weibo em:hover{background-repeat:no-repeat; background-position:66.6666% 100%;}
+p.github em{background-repeat:no-repeat; background-position:100% 0%;}
+p.github em:hover{background-repeat:no-repeat; background-position:100% 100%;}
 header.top .h-r p span, header.top .h-r p a, header.top .h-r p i{display: none;}
-header.top .h-r img{width: 40px; margin: 10px 0;}
 header.top > p{display: none;}
 
 .info{
