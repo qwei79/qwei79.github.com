@@ -28,10 +28,12 @@ body {
 }
 
 header, header img, header p, header p em{transition:all .6s;}
-header{text-align:center;}
+header{text-align:center; background: #3598db; color: #fff;}
 header h1{margin:0;}
 header img{border-radius:50%; width:100px;}
 header p{margin:0;}
+header p span{display: inline-block; text-align: right;}
+header p a{color: #fff; outline: 0; display: inline-block; text-align: center;}
 header .h-r img{display: none;}
 header.top{height: 60px; background: #3598db; width: 100%; position: fixed; top: 0;}
 header.top h1{width: 100%; position: fixed; line-height: 60px;}
@@ -71,8 +73,8 @@ header.top > p{display: none;}
   text-align: left;
 }
 /*.h-l, .h-r{width: 50%;}*/
-.bosh{display: none; color: rgba(220,220,220,.5);}
-.info p i{font-size: 9px; color: rgba(220,220,220,.5)}
+.bosh{display: none; font-size: 4px; color: rgba(220,220,220,.1);}
+.info p i{font-size: 9px; color: rgba(220,220,220,.7)}
 /*估计是大设备*/
 @media screen and (min-width: 1200px) {
   .p-xl{display: block;}

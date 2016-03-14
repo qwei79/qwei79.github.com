@@ -23,6 +23,32 @@ window.onload = function(){
   header.className = "top";
   headerHeightTop = header.offsetHeight;
   header.className = "";
+
+  var hRa= new Array;
+  var hRspan = new Array;
+  var hRp = document.getElementsByClassName("h-r")[0].getElementsByTagName("p");
+  for (var i = 1; i < hRp.length; i++) {
+    hRa[hRa.length] = hRp[i].getElementsByTagName("a")[0];
+    hRspan[hRspan.length] = hRp[i].getElementsByTagName("span")[0];
+  };
+  console.log(hRa);
+  var hRaWidth=0, hRspanWidth=0;
+  for (var i = 0; i<hRa.length; i++) {
+    if(hRa[i].offsetWidth > hRaWidth){
+      hRaWidth = hRa[i].offsetWidth;
+    }
+  };
+  for (var i = 0; i<hRa.length; i++) {
+    hRa[i].style.width = hRaWidth + 10 + "px";
+  };
+  for (var i = 0; i<hRspan.length; i++) {
+    if(hRspan[i].offsetWidth > hRspanWidth){
+      hRspanWidth = hRspan[i].offsetWidth;
+    }
+  };
+  for (var i = 0; i<hRspan.length; i++) {
+    hRspan[i].style.width = hRspanWidth + "px";
+  };
 }
 window.onscroll = function(){
   var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop;
