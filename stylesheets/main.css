@@ -27,11 +27,11 @@ body {
   100% { background-position: -100% 0;}
 }
 
-header{text-align:center;}
+header{text-align:center; transition:all .6s;}
 header h1{margin:0;}
 header img{border-radius:50%; width:100px;}
 header p{margin:0;}
-header.top{height: 60px; position: absolute; background: #00a0e9; width: 100%;}
+header.top{height: 60px; background: #00a0e9; width: 100%; position: fixed; top: 0;}
 header.top h1{display: none;}
 header.top .h-l{text-align: left;}
 header.top .h-l img{width: 40px; margin: 10px 0;}
@@ -39,6 +39,7 @@ header.top .h-r{text-align: right;}
 header.top .h-r p{display: inline;}
 header.top .h-r p span, header.top .h-r p a, header.top .h-r p i{display: none;}
 header.top .h-r img{width: 40px; margin: 10px 0;}
+header.top > p{display: none;}
 
 .info{
   display: -moz-box; 
