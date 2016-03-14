@@ -15,15 +15,22 @@ function getElementsByClassName(node, classname) {
   }
 }
 
-
+/* header部分 */
 var header = document.getElementsByTagName("header")[0];
 var headerHeight = header.offsetHeight;
 var headerHeightTop;
+
 window.onload = function(){
+
+  /* header上滚高度获取 */
   header.className = "top";
   headerHeightTop = header.offsetHeight;
   header.className = "";
 
+  /* info部分 */
+  /*
+  var hRaCeshi=document.getElementsByClassName("h-r")[0].getElementsByTagName("a");
+  console.log(hRaCeshi);
   var hRa= new Array;
   var hRspan = new Array;
   var hRp = document.getElementsByClassName("h-r")[0].getElementsByTagName("p");
@@ -31,6 +38,9 @@ window.onload = function(){
     hRa[hRa.length] = hRp[i].getElementsByTagName("a")[0];
     hRspan[hRspan.length] = hRp[i].getElementsByTagName("span")[0];
   };
+  */
+  var hRa= document.getElementsByClassName("h-r")[0].getElementsByTagName("a");
+  var hRspan = document.getElementsByClassName("h-r")[0].getElementsByTagName("span");
   var hRaWidth=0, hRspanWidth=0;
   for (var i = 0; i<hRa.length; i++) {
     if(hRa[i].offsetWidth > hRaWidth){
@@ -49,6 +59,7 @@ window.onload = function(){
     hRspan[i].style.width = hRspanWidth + "px";
   };
 }
+/* header上滚样式变更 */
 window.onscroll = function(){
   var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop;
   if( scrollHeight >= headerHeight - headerHeightTop ) {
