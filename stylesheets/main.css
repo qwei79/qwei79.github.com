@@ -13,3 +13,16 @@ body {
     color:#444;
   }
 }
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { 
+  header {
+    background-image: -webkit-linear-gradient(left, #147B96, #E6D205 25%, #147B96 50%, #E6D205 75%, #147B96);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-background-size: 200% 100%;
+    -webkit-animation: masked-animation 4s infinite linear;
+  }
+}
+@-webkit-keyframes masked-animation {
+  0%  { background-position: 0 0;}
+  100% { background-position: -100% 0;}
+}
