@@ -35,10 +35,10 @@ header p{margin:0;}
 header .h-r img{display: none;}
 header.top{height: 60px; background: #3598db; width: 100%; position: fixed; top: 0;}
 header.top h1{width: 100%; position: fixed; line-height: 60px;}
-header.top .h-l{text-align: left;}
+header.top .h-l{position: absolute;}
 header.top .h-l img{width: 40px; margin: 10px;}
-header.top .h-r{text-align: right;}
-header.top .h-r p{float: right;}
+header.top .h-r{position: absolute; top: 0; right: 0;}
+header.top .h-r p{float: left;}
 header.top .h-r p:nth-child(1){display: none;}
 header.top .h-r em{display: block; height: 40px; width: 40px; margin: 10px; float: left; background-image: url(../images/info.png);}
 p.blog em{background-repeat:no-repeat; background-position:0% 0%;}
@@ -87,6 +87,7 @@ header.top > p{display: none;}
   .info{display:block;}
   .h-l, .h-r{text-align: center;}
   .h-l i, .h-r i{display: none;}
+  header.top h1{display: none;}
 }
 /*估计手机设备*/
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -94,6 +95,7 @@ header.top > p{display: none;}
   .info{display:block;}
   .h-l, .h-r{text-align: center;}
   .h-l i, .h-r i{display: none;}
+  header.top h1{display: none;}
 }
 /*最小设备*/
 @media only screen and (max-width: 479px) {
@@ -101,4 +103,5 @@ header.top > p{display: none;}
   .info{display:block;}
   .h-l, .h-r{text-align: center;}
   .h-l i, .h-r i{display: none;}
+  header.top h1{display: none;}
 }
