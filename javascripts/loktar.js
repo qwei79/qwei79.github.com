@@ -39,24 +39,23 @@ window.onload = function(){
     hRspan[hRspan.length] = hRp[i].getElementsByTagName("span")[0];
   };
   */
-  var hRa= document.getElementsByClassName("h-r")[0].getElementsByTagName("a");
-  var hRspan = document.getElementsByClassName("h-r")[0].getElementsByTagName("span");
-  var hRaWidth=0, hRspanWidth=0;
-  for (var i = 0; i<hRa.length; i++) {
-    if(hRa[i].offsetWidth > hRaWidth){
-      hRaWidth = hRa[i].offsetWidth;
+  var span = document.getElementsByClassName("h-r")[0].getElementsByTagName("span");
+  var spanTitle=0, spanInfo=0;
+  for (var i = 0; i<(span.length/2); i++) {
+    if(span[2*i].offsetWidth > spanTitle){
+      spanTitle = span[2*i].offsetWidth;
     }
   };
-  for (var i = 0; i<hRa.length; i++) {
-    hRa[i].style.width = hRaWidth + 10 + "px";
+  for (var i = 0; i<(span.length/2); i++) {
+    span[2*i].style.width = spanTitle + 10 + "px";
   };
-  for (var i = 0; i<hRspan.length; i++) {
-    if(hRspan[i].offsetWidth > hRspanWidth){
-      hRspanWidth = hRspan[i].offsetWidth;
+  for (var i = 0; i<(span.length/2); i++) {
+    if(span[2*i+1].offsetWidth > spanInfo){
+      spanInfo = span[2*i+1].offsetWidth;
     }
   };
-  for (var i = 0; i<hRspan.length; i++) {
-    hRspan[i].style.width = hRspanWidth + "px";
+  for (var i = 0; i<(span.length/2); i++) {
+    span[2*i+1].style.width = spanInfo + 10 + "px";
   };
 }
 /* header上滚样式变更 */

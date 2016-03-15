@@ -34,6 +34,7 @@ header img{border-radius:50%; width:100px;}
 header p{margin:0;}
 header p span{display: inline-block; text-align: right;}
 header p a{color: #fff; outline: 0; display: inline-block; text-align: center;}
+header p a span{text-align: left;}
 header .h-r img{display: none;}
 header.top{height: 60px; background: #3598db; width: 100%; position: fixed; top: 0;}
 header.top h1{width: 100%; position: fixed; line-height: 60px;}
