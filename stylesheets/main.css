@@ -6,6 +6,8 @@ body {
   margin: 0;
 }
 
+ul{list-style:none; padding:0; margin:0;}
+
 @media print {
   body {
     padding:0.4in;
@@ -26,9 +28,9 @@ body {
   0%  { background-position: 0 0;}
   100% { background-position: -100% 0;}
 }
-
+.wrapper{margin:0 auto;}
 header, header p, header p em{transition:all .6s;}
-header{text-align:center; background: #3ab2fe; color: #fff; box-shadow: 0px 0px 5px #666;}
+header{text-align:center; background: #3ab2fe; color: #fff; box-shadow: 0px 0px 5px #666; z-index: 9999;}
 header h1{margin:0;}
 header img{border-radius:50%; width:100px;}
 header p{margin:0;}
@@ -43,6 +45,7 @@ header.top .h-l img{width: 40px; margin: 10px;}
 header.top .h-r{position: absolute; top: 0; right: 0;}
 header.top .h-r p{float: left;}
 header.top .h-r p:nth-child(1){display: none;}
+header.top .header-content p{display: none;}
 header.top .h-r em{display: block; height: 40px; width: 40px; margin: 10px; float: left; background-image: url(../images/info.png);}
 p.blog em{background-repeat:no-repeat; background-position:0% 0%;}
 p.blog em:hover{background-repeat:no-repeat; background-position:0% 100%;}
@@ -76,13 +79,31 @@ header.top > p{display: none;}
 /*.h-l, .h-r{width: 50%;}*/
 .bosh{display: none; font-size: 4px; color: rgba(220,220,220,.1);}
 .info p i{font-size: 9px; color: rgba(220,220,220,.7)}
+
+/* 瀑布流 begin */
+.pubuliu{position: relative; padding: 0;}
+.pubuliu li{
+  position: absolute;
+  background: #ddd;
+  text-align: center;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  border-radius: 5px;
+}
+
 /*估计是大设备*/
 @media screen and (min-width: 1200px) {
   .p-xl{display: block;}
+  .wrapper{width: 1190px;}
+  .pubuliu li{width: 190px;}
 }
 /*估计是电脑设备*/
 @media screen and (min-width: 960px) and (max-width: 1199px) {
   .p-l{display: block;}
+  .wrapper{width: 940px;}
+  .pubuliu li{width: 180px;}
 }
 /*估计是平板设备*/
 @media screen and (min-width: 768px) and (max-width: 959px) {
@@ -91,6 +112,8 @@ header.top > p{display: none;}
   .h-l, .h-r{text-align: center;}
   .h-l i, .h-r i{display: none;}
   header.top h1{display: none;}
+  .wrapper{width: 750px;}
+  .pubuliu li{width: 180px;}
 }
 /*估计手机设备*/
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -99,6 +122,8 @@ header.top > p{display: none;}
   .h-l, .h-r{text-align: center;}
   .h-l i, .h-r i{display: none;}
   header.top h1{display: none;}
+  .wrapper{width: 100%;}
+  .pubuliu li{width: 49%;}
 }
 /*最小设备*/
 @media only screen and (max-width: 479px) {
@@ -107,4 +132,6 @@ header.top > p{display: none;}
   .h-l, .h-r{text-align: center;}
   .h-l i, .h-r i{display: none;}
   header.top h1{display: none;}
+  .wrapper{width: 100%;}
+  .pubuliu li{width: 100%;}
 }
