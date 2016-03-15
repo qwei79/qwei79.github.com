@@ -27,18 +27,7 @@ window.onload = function(){
   headerHeightTop = header.offsetHeight;
   header.className = "";
 
-  /* info部分 */
-  /*
-  var hRaCeshi=document.getElementsByClassName("h-r")[0].getElementsByTagName("a");
-  console.log(hRaCeshi);
-  var hRa= new Array;
-  var hRspan = new Array;
-  var hRp = document.getElementsByClassName("h-r")[0].getElementsByTagName("p");
-  for (var i = 1; i < hRp.length; i++) {
-    hRa[hRa.length] = hRp[i].getElementsByTagName("a")[0];
-    hRspan[hRspan.length] = hRp[i].getElementsByTagName("span")[0];
-  };
-  */
+  /* info部分的span宽度调整 */
   var span = document.getElementsByClassName("h-r")[0].getElementsByTagName("span");
   var spanTitle=0, spanInfo=0;
   for (var i = 0; i<(span.length/2); i++) {
@@ -57,9 +46,12 @@ window.onload = function(){
   for (var i = 0; i<(span.length/2); i++) {
     span[2*i+1].style.width = spanInfo + 10 + "px";
   };
-}
-/* header上滚样式变更 */
+
+}/* window.onload end */
+
 window.onscroll = function(){
+
+  /* header上滚样式变更 */
   var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop;
   if( scrollHeight >= headerHeight - headerHeightTop ) {
     header.className = "top";
@@ -68,4 +60,5 @@ window.onscroll = function(){
     header.className = "";
     document.body.style.paddingTop = 0;
   }
-}
+
+}/* window.onscroll end */
