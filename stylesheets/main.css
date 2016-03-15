@@ -15,11 +15,11 @@ body {
 }
 @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { 
   header h1 {
-    background-image: -webkit-linear-gradient(left, #ff6e02, #ffff00 25%, #ff6e02 50%, #ffff00 75%, #ff6e02);
+    background-image: -webkit-linear-gradient(left, #3ab2fe, #3ab2fe 15%, #fff 25%, #3ab2fe 35%, #3ab2fe 65%, #fff 75%, #3ab2fe 85%, #3ab2fe);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-background-size: 200% 100%;
-    -webkit-animation: masked-animation 1s infinite linear;
+    -webkit-animation: masked-animation 2.5s infinite linear;
   }
 }
 @-webkit-keyframes masked-animation {
@@ -28,7 +28,7 @@ body {
 }
 
 header, header img, header p, header p em{transition:all .6s;}
-header{text-align:center; background: #3598db; color: #fff;}
+header{text-align:center; background: #3ab2fe; color: #fff;}
 header h1{margin:0;}
 header img{border-radius:50%; width:100px;}
 header p{margin:0;}
@@ -36,7 +36,7 @@ header p span{display: inline-block; text-align: right;}
 header p a{color: #fff; outline: 0; display: inline-block; text-align: center;}
 header p a span{text-align: left;}
 header .h-r img{display: none;}
-header.top{height: 60px; background: #3598db; width: 100%; position: fixed; top: 0;}
+header.top{height: 60px; background: #3ab2fe; width: 100%; position: fixed; top: 0;}
 header.top h1{width: 100%; position: fixed; line-height: 60px;}
 header.top .h-l{position: absolute;}
 header.top .h-l img{width: 40px; margin: 10px;}
