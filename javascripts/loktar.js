@@ -62,3 +62,21 @@ window.onscroll = function(){
   }
 
 }/* window.onscroll end */
+
+/* 首页特效调用 */
+function indexScript(scriptName) {
+  var scrArray = document.getElementsByTagName("script");
+  var scriptBool = true;
+  for (var i=0; i<scrArray.length; i++){
+    var scrSrc = "javascripts/" + scriptName + ".js";
+    if(scrArray[i].getAttribute("src")==scrSrc){
+      scriptBool = false;
+    }
+  }
+  if(scriptBool){
+    var script = document.createElement("script");
+    script.src= "javascripts/" + scriptName + ".js";
+    document.body.appendChild(script);
+  }
+}/* indexScript end */
+
