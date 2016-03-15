@@ -110,14 +110,28 @@ function pubuliu(){
   }
 }/* pubuliu end */
 
+/* 按钮组宽度设置 */
+function aGroupWidth(){
+  var a_group = document.getElementsByClassName("a-group");
+  for(var i=0; i<a_group.length; i++){
+    var a_button=a_group[i].getElementsByTagName("a");
+    for(var ii=0; ii<a_button.length; ii++){
+      a_button[ii].style.width=a_group[i].offsetWidth*0.3 + "px";
+    }
+    a_button[a_button.length - 1].style.width = a_group[i].offsetWidth*0.4 - 2 + "px";
+  }
+}
+
 window.onscroll = function(){
   headerTop();
 }/* window.onscroll end */
 window.onresize = function(){
   pubuliu();
+  aGroupWidth();
 }/* window.onresize end */
 window.onload = function(){
   headerScroll();
   infoSpanWidth();
   pubuliu();
+  aGroupWidth();
 }/* window.onload end */

@@ -1,9 +1,13 @@
+html{
+  font-size:62.5%;
+}
 body {
   background-color: #fff;
   font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#727272;
   font-weight:400;
   margin: 0;
+  background-color:#fcfcfc;
 }
 
 ul{list-style:none; padding:0; margin:0;}
@@ -37,16 +41,22 @@ header p{margin:0;}
 header p span{display: inline-block; text-align: right;}
 header p a{color: #fff; outline: 0; display: inline-block; text-align: center;}
 header p a span{text-align: left;}
+
+.info:after{content: ""; display: block; clear: both;}
+.info .h-l{float: left; text-align: right; width: 40%;}
+.info .h-r{float: right; text-align: left; width: 60%;}
+.top .info .h-l{text-align: left;}
+.top .info .h-r{text-align: right;}
+.top .info .h-r p{display: inline;}
+
 header .h-r img{display: none;}
 header.top{height: 60px; background: #3ab2fe; width: 100%; position: fixed; top: 0;}
-header.top h1{width: 100%; position: fixed; line-height: 60px;}
-header.top .h-l{position: absolute;}
-header.top .h-l img{width: 40px; margin: 10px;}
-header.top .h-r{position: absolute; top: 0; right: 0;}
-header.top .h-r p{float: left;}
-header.top .h-r p:nth-child(1){display: none;}
-header.top .header-content p{display: none;}
-header.top .h-r em{display: block; height: 40px; width: 40px; margin: 10px; float: left; background-image: url(../images/info.png);}
+header.top h1{position: fixed; line-height: 60px;}
+.top .info .h-l{position: absolute;}
+.top .info .h-l img{width: 40px; margin: 10px;}
+.top .info .h-r p:nth-child(1){display: none;}
+.top .info .h-r em{display: block; height: 40px; width: 40px; margin: 10px; float: left; background-image: url(../images/info.png);}
+header.top .header-content{display: none;}
 p.blog em{background-repeat:no-repeat; background-position:0% 0%;}
 p.blog em:hover{background-repeat:no-repeat; background-position:0% 100%;}
 p.msn em{background-repeat:no-repeat; background-position:33.3333% 0%;}
@@ -58,52 +68,43 @@ p.github em:hover{background-repeat:no-repeat; background-position:100% 100%;}
 header.top .h-r p span, header.top .h-r p i{display: none;}
 header.top > p{display: none;}
 
-.info{
-  display: -moz-box; 
-  display: -webkit-box; 
-  display: box; 
-}
-.h-l{
-  -moz-box-flex: 5; 
-  -webkit-box-flex: 5; 
-  box-flex: 5;
-  padding-right: 10px;
-  text-align: right;
-}
-.h-r{
-  -moz-box-flex: 3;
-  -webkit-box-flex: 3; 
-  box-flex: 3;
-  text-align: left;
-}
-/*.h-l, .h-r{width: 50%;}*/
-.bosh{display: none; font-size: 4px; color: rgba(220,220,220,.1);}
-.info p i{font-size: 9px; color: rgba(220,220,220,.7)}
+.bosh{display: none; font-size: .4rem; color: rgba(220,220,220,.1);}
+.info p i{font-size: .9rem; color: rgba(220,220,220,.7)}
 
 /* 瀑布流 begin */
 .pubuliu{position: relative; padding: 0;}
 .pubuliu li{
   position: absolute;
-  background: #ddd;
+  background: #fff;
   text-align: center;
   -webkit-transition: all .5s ease-out;
   -moz-transition: all .5s ease-out;
   -o-transition: all .5s ease-out;
   transition: all .5s ease-out;
   border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px #666;
 }
+
+/* 单独效果样式 */
+.effect{background: #eee; height: 60px; border-bottom:1px solid #eee;}
+.describe{font-size: 1.4rem; padding: 3px 5px; margin: 0;}
+/* 按钮组 */
+.a-group:after{content: ""; display: block; clear:both;}
+.a-group a{display: block; float: left; border-top:1px solid; color: #fff; background-color: #3ab2fe; cursor: pointer; font-size: 1.2rem;}
+.a-group a:nth-child(2){border-left: 1px solid #fff; border-right: 1px solid #fff;}
 
 /*估计是大设备*/
 @media screen and (min-width: 1200px) {
   .p-xl{display: block;}
   .wrapper{width: 1190px;}
-  .pubuliu li{width: 190px;}
+  .pubuliu li{width: 188px;}
 }
 /*估计是电脑设备*/
 @media screen and (min-width: 960px) and (max-width: 1199px) {
   .p-l{display: block;}
   .wrapper{width: 940px;}
-  .pubuliu li{width: 180px;}
+  .pubuliu li{width: 178px;}
 }
 /*估计是平板设备*/
 @media screen and (min-width: 768px) and (max-width: 959px) {
@@ -113,7 +114,7 @@ header.top > p{display: none;}
   .h-l i, .h-r i{display: none;}
   header.top h1{display: none;}
   .wrapper{width: 750px;}
-  .pubuliu li{width: 180px;}
+  .pubuliu li{width: 178px;}
 }
 /*估计手机设备*/
 @media only screen and (min-width: 480px) and (max-width: 767px) {
