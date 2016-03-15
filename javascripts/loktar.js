@@ -65,17 +65,17 @@ window.onscroll = function(){
 
 /* 首页特效调用 */
 function indexScript(scriptName) {
-  var scrArray = document.getElementsByTagName("script");
+  var scriptArray = document.getElementsByTagName("script");
+  var scriptSrc = "javascripts/" + scriptName + ".js";
   var scriptBool = true;
-  for (var i=0; i<scrArray.length; i++){
-    var scrSrc = "javascripts/" + scriptName + ".js";
-    if(scrArray[i].getAttribute("src")==scrSrc){
+  for (var i=0; i<scriptArray.length; i++){
+    if(scriptArray[i].getAttribute("src")==scriptSrc){
       scriptBool = false;
     }
   }
   if(scriptBool){
     var script = document.createElement("script");
-    script.src= "javascripts/" + scriptName + ".js";
+    script.src= scriptSrc;
     document.body.appendChild(script);
   }
 }/* indexScript end */
