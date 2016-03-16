@@ -47,11 +47,11 @@ header p a span{text-align: left;}
 .info .h-r{float: right; text-align: left; width: 60%;}
 .top .info .h-l{text-align: left;}
 .top .info .h-r{text-align: right;}
-.top .info .h-r p{display: inline;}
+.top .info .h-r p{display: inline; z-index: 999;}
 
 header .h-r img{display: none;}
 header.top{height: 60px; background: #3ab2fe; width: 100%; position: fixed; top: 0;}
-header.top h1{position: fixed; line-height: 60px;}
+header.top h1{position: fixed; line-height: 60px; z-index: -1;}
 .top .info .h-l{position: absolute;}
 .top .info .h-l img{width: 40px; margin: 10px;}
 .top .info .h-r p:nth-child(1){display: none;}
