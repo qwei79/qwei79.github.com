@@ -116,9 +116,9 @@ function aGroupWidth(){
   for(var i=0; i<a_group.length; i++){
     var a_button=a_group[i].getElementsByTagName("a");
     for(var ii=0; ii<a_button.length; ii++){
-      a_button[ii].style.width=a_group[i].offsetWidth*0.3 + "px";
+      a_button[ii].style.width=a_group[i].offsetWidth*(1/a_button.length) + "px";
     }
-    a_button[a_button.length - 1].style.width = a_group[i].offsetWidth*0.4 - 2 + "px";
+    a_button[a_button.length - 1].style.width = a_group[i].offsetWidth*(1/a_button.length) - 2 + "px";
   }
 }
 
