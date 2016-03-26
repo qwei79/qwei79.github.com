@@ -14,6 +14,15 @@ function getElementsByClassName(node, classname) {
 	return results;
   }
 }
+/* 定义方法 insertAfter(newElement,targetElemnt) */
+function inserAfter(newElement,targetElemnt){
+  var parent = targetElemnt.parentNode;
+  if(parent.lastChild == targetElemnt){
+    parent.appendChild(newElement);
+  } else {
+    parent.insertBefore(newElement,targetElemnt.nextSibling);
+  }
+}
 
 /* header部分 */
 var header = document.getElementsByTagName("header")[0];
