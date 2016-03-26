@@ -23,6 +23,18 @@ function inserAfter(newElement,targetElemnt){
     parent.insertBefore(newElement,targetElemnt.nextSibling);
   }
 }
+/* onload追加处理 */
+function addLoadEvent(func){
+  var oldonload = window.onload;
+  if(typeof window.onload != 'function'){
+    window.onload = func;
+  } else {
+    window.onload = function(){
+      oldonload();
+      func();
+    }
+  }
+}
 
 /* header部分 */
 var header = document.getElementsByTagName("header")[0];
@@ -138,9 +150,9 @@ window.onresize = function(){
   pubuliu();
   aGroupWidth();
 }/* window.onresize end */
-window.onload = function(){
-  headerScroll();
-  infoSpanWidth();
-  pubuliu();
-  aGroupWidth();
-}/* window.onload end */
+
+addLoadEvent(headerScroll);
+addLoadEvent(infoSpanWidth);
+addLoadEvent(pubuliu);
+addLoadEvent(aGroupWidth);
+/* window.onload end */
