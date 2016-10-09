@@ -88,6 +88,7 @@ header.top > p{display: none;}
 .describe{font-size: 1.4rem; padding: 3px 5px; margin: 0;}
 /* 按钮组 */
 .a-group:after{content: ""; display: block; clear:both;}
+.collaborator .a-group a{background-color: #3ab3ab;}
 .a-group a{display: block; float: left; border-top:1px solid; color: #fff; background-color: #3ab2fe; cursor: pointer; font-size: 1.2rem;}
 .a-group a ~ a{border-left: 1px solid #fff;}
 
