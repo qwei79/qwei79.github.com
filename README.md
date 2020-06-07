@@ -16,6 +16,7 @@
  - Github: [https://github.com/qwei79](http://qwei79.github.io)
  - 期望职位：前端开发
  - 期望城市：北京
+ - 资深打杂，基础扎实，有各种项目经验。
 
 ---
 
