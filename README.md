@@ -12,7 +12,6 @@
 
  - 刘庆伟/男/1989 
  - 专科/云南林业职业技术学院计科系 
- - 工作年限：7年
  - Github: [https://github.com/qwei79](http://qwei79.github.io)
  - 期望职位：前端开发
  - 期望城市：北京
@@ -40,7 +39,7 @@
 > - iOS链接：[http://t.cn/ELIO9TD](http://qwei79.github.io/little/shooter/h5/view/index.html)
 
 ### 自由贺卡
-> - 描述：一个在固定区域内随意添加与拖动模块的项目，期望做成贺卡形式，但因个人目前后端能力有限，无法做保存与分享，仅能操作。仅有pc版本。
+> - 描述：一个在固定区域内随意添加与拖动模块的项目。仅有pc版本。
 > - 链接：[http://t.cn/RM0pSn5](http://qwei79.github.io/little/greeting-card/view/index.html)
 
 ---
