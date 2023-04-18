@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/894.dbd9e4ae.chunk.js","mappings":"yIAKA,UAHA,WACE,OAAO","sources":["pages/Demo/index.tsx"],"sourcesContent":["import React from 'react';\n\nfunction Demo() {\n  return <div>demo</div>;\n}\nexport default Demo;\n"],"names":[],"sourceRoot":""}
