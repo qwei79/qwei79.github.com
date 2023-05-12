@@ -1,0 +1,43 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="description" content="一个刘庆伟用来写博客的地方"><meta name="keyword"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>纯函数：为什么它们是函数式编程的基石？</title><link rel="shortcut icon" href="/images/avatar.png" type="image/x-icon"><link href="/styles/site.css" rel="stylesheet"><meta name="generator" content="Hexo 5.4.2"></head><body><header class="container" id="header"><div class="header"><div class="header-left"><div class="avatar"><img src="/images/avatar.png"></div><div class="author"><div class="author-name"><a href="/">刘庆伟的日志中心</a></div><div class="about-me">一个渣渣前端切图仔用来写日志的地方</div></div></div><div class="header-right"><ul class="navigation"><li><a href="/archives">归档</a></li></ul></div><div class="about-me-mask"><div class="about-me-wrap"><div class="about-me__header"><div class="avatar"><img src="/images/avatar.png"></div></div><ul class="socials"><li class="social-item"><span class="label"><img src="/images/socials/github.svg" alt="https://github.com/qwei79"></span><a href="https://github.com/qwei79" target="_blank" title="https://github.com/qwei79">https://github.com/qwei79</a></li><li class="social-item"><span class="label"><img src="/images/socials/email.svg" alt="qwei@msn.com"></span><span>qwei@msn.com</span></li><li class="social-item"><span class="label"><img src="/images/socials/wechat.svg" alt="liuqw579"></span><span>liuqw579</span></li></ul></div></div></div></header><div class="container post"><section class="article"><div class="title">纯函数：为什么它们是函数式编程的基石？</div><div class="date">写于2023年05月12日</div><div class="content"><h2 id="什么是纯函数？"><a href="#什么是纯函数？" class="headerlink" title="什么是纯函数？"></a>什么是纯函数？</h2><p>首先，咱们来看下什么是纯函数。</p>
+<p>在计算机科学中，函数是指接受一个或多个输入并产生一个输出的计算单元。通过函数，我们可以将一个庞大的问题拆成一系列小的子问题，这些子问题可以更容易地处理和组合。但是，如果函数对同样的输入产生不同的输出，或者函数在执行时对程序状态造成了影响，那么这个函数就不是纯函数。</p>
+<p>所以纯函数的输出只取决于它的输入，并且没有<strong>副作用</strong>。即相同的输入永远得到相同的输出，不会修改任何外部状态，不会影响到程序的运行环境。在函数式编程中，纯函数是非常重要的概念，因为它们可以更加可靠、易于测试和维护，它是函数式编程的基础。</p>
+<p>一个纯函数可以看作是一个数学函数，因为它根据输入参数计算结果，不考虑任何外部因素。下面来看一个纯函数的示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">double</span>(<span class="params">num</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> num * <span class="number">2</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>在这个函数中，如果 <code>num</code> 参数相同，那么结果也会相同，而且这个函数没有任何副作用，不会改变任何程序状态或环境。</p>
+<p>下面，我们将详细介绍纯函数的概念、优点以及如何编写纯函数。</p>
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>纯函数是指一个函数没有副作用，也就是说，函数不会改变除函数之外的任何内容。如果一个函数满足以下条件，那么它就是一个纯函数：</p>
+<ul>
+<li>对于相同的输入，函数返回相同的输出。</li>
+<li>函数执行过程中没有副作用，不修改函数之外的任何内容。</li>
+<li>函数没有引入全局状态。</li>
+</ul>
+<h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><p>纯函数的优点在于它们可以提供更好的可维护性和可测试性。由于一个纯函数完全由输入所决定，因此可以保证函数的行为是可预测的，不会受到外部因素的影响。这使得纯函数更加容易测试，因为可以简单地对函数进行单元测试，而不需要担心函数的影响。</p>
+<p>此外，纯函数还具有很好的可组合性。由于纯函数不会引入任何副作用，因此可以安全地将它们组合在一起。这使得函数的复杂性得到了控制，提高了代码的可读性和可维护性。同时，由于纯函数不修改外部状态，因此它们易于并行执行。每个纯函数都可以独立地执行，而不必担心任何其他线程或进程会干扰它。</p>
+<p>并且由于纯函数具有相同的输出，给定相同的输入，因此我们可以缓存函数的输出，而不必重新计算。这提高了性能，因为不需要重复代码执行，可以节省计算时间。同时，纯函数更容易优化，因为它不依赖于外部状态，可以通过自身的输入和输出进行优化。</p>
+<p>还有就是，由于纯函数不依赖于外部状态，因此可以更轻松地进行重构和修改。我们可以更改纯函数的实现方式，而不用担心影响其他代码的行为。</p>
+<p>因此，我推荐大家使用纯函数的主要原因是，纯函数具有可测试性、可维护性和可重用性，而且易于并行化和优化。纯函数能够有效降低程序的复杂度和维护成本，这是函数式编程的一个重要理念。</p>
+<p>下面是一个例子，说明如何使用纯函数和非纯函数实现完全相同的功能：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 非纯函数的实现方式</span></span><br><span class="line"><span class="keyword">let</span> num = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">number</span>) &#123;</span><br><span class="line">  num += number;</span><br><span class="line">  <span class="keyword">return</span> num;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">add</span>(<span class="number">1</span>));   <span class="comment">// 1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">add</span>(<span class="number">2</span>));   <span class="comment">// 3</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">add</span>(<span class="number">3</span>));   <span class="comment">// 6</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num);      <span class="comment">// 6</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 纯函数的实现方式：</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">sum, number</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> sum + number;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> num = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">let</span> sum = <span class="title function_">add</span>(<span class="title function_">add</span>(<span class="title function_">add</span>(num, <span class="number">1</span>), <span class="number">2</span>), <span class="number">3</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num);  <span class="comment">// 0</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(sum);  <span class="comment">// 6</span></span><br></pre></td></tr></table></figure>
+<p>可以看出，第一种实现方式使用了一个全局变量，修改了外部状态，而第二种实现方式使用了一个纯函数，没有修改任何外部状态。</p>
+<h2 id="编写纯函数的技巧"><a href="#编写纯函数的技巧" class="headerlink" title="编写纯函数的技巧"></a>编写纯函数的技巧</h2><p>编写纯函数有一些技巧，这些技巧可以帮助我们编写更好的纯函数：</p>
+<ul>
+<li>避免使用全局状态，最好传递所有需要的状态作为函数的参数。</li>
+<li>避免修改输入的参数，如果需要改变输入参数，最好使用副本进行操作。</li>
+<li>避免使用外部资源，如访问数据库或网络，最好把这些操作封装在纯函数之外。</li>
+<li>使用不可变数据结构，例如数组或对象不变性，确保函数不会改变任何输入参数。</li>
+<li>避免使用非纯函数，最好使用纯函数进行组合。如果必须使用非纯函数，可以将其封装在一个纯函数内部，以确保纯函数的一致性。</li>
+</ul>
+<h2 id="最后的叨叨"><a href="#最后的叨叨" class="headerlink" title="最后的叨叨"></a>最后的叨叨</h2><p>函数编程的一个重要思想是尽可能使用纯函数，避免非纯函数的副作用。纯函数可以提供更高的可维护性和可测试性，因为它们的行为是可预测的。</p>
+<p>编写纯函数需要遵循一些技巧，例如避免使用全局状态、修改输入参数和使用外部资源等。在编写高质量代码时，应该尽量使用纯函数，以提高代码的可靠性、可维护性和可扩展性。</p>
+<p>虽然在某些情况下，使用非纯函数是必要的，但我们应该尽可能地使用纯函数，尽可能减少程序的副作用。从长远来看，这将使我们编写更好的代码。</p>
+</div><div class="tags"></div></section></div><div class="container"><ul class="nav"><li>下一篇：<a href="/2023/05/09/type-interface/">功能相似场景雷同，TS中的 type 和 interface 到底有什么区别？</a></li></ul></div><div id="backToTop"><div class="back-arrow back-arrow-left"></div><div class="back-arrow back-arrow-right"></div></div><footer class="container"><div class="rights"><span>Powered by </span><a href="http://hexo.io" target="_blank">Hexo</a><span>, Theme </span><a href="https://github.com/gary-Shen/hexo-theme-bear" target="_blank">Bear</a><span>.</span></div></footer>
+<script src="/script/jquery.min.js"></script>
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+<script src="/script/index.js"></script>
+
+<script src="/script/post.js"></script>
+</body></html>
